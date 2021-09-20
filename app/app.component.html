@@ -1,0 +1,37 @@
+<mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+  <mat-nested-tree-node *matTreeNodeDef="let node">
+    <li>
+      <div style="margin-left:3px;" class="mat-tree-node selectable">
+        <button (click)="onItemSelected(node)" [style.borderLeft]="'5px solid' + node.borderColor " mat-button>
+      
+      <mat-icon style="margin-right: 10px;margin-left:10px
+      ">person</mat-icon>
+        {{node.item}}
+      </button>
+      </div>
+    </li>
+  </mat-nested-tree-node>
+  <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChildren">
+  <mat-icon mat-icon-button matTreeNodeToggle
+    [matTreeNodeToggleRecursive]="false"
+  [attr.aria-label]="'toggle ' + node.item" class="expend">
+    {{treeControl.isExpanded(node) ? 'remove_circle_outline' : 'add_circle_outline'}}
+    </mat-icon>
+    <li class="example-tree-container">
+    
+      <div class="mat-tree-node"
+      >
+            <span [style.borderLeft]="'5px solid' + node.borderColor ">
+            <mat-icon style="margin-right: 10px;margin-left:10px
+            ">recent_actors</mat-icon>
+              {{node.item}}</span>
+      </div>
+      <ul class="example-tree-nested-node">
+        <div class="test" *ngIf="treeControl.isExpanded(node)">
+          <ng-container matTreeNodeOutlet></ng-container>
+        </div>
+      </ul>
+    </li>
+
+  </mat-nested-tree-node>
+</mat-tree>

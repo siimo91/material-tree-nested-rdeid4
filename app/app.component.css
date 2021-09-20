@@ -1,0 +1,113 @@
+.example-tree-progress-bar {
+  margin-left: 30px;
+}
+
+.example-tree-nested-node {
+  padding-left: 30px;
+}
+
+mat-tree {
+  margin-left: 20px;
+  position: relative;
+  font-family: Roboto,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+.mat-tree-node {
+  padding: 0;
+  background-color: white;
+}
+
+
+
+.mat-nested-tree-node {
+  top: -24px;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li.example-tree-container {
+  border-bottom: 0;
+}
+
+ul {
+  padding-left: 40px;
+}
+
+li {
+  padding-left: 20px;
+  border: 1px dotted grey;
+  border-width: 0 0 1px 1px;
+  position: relative;
+  top: -24px;
+  height: auto;
+}
+
+div > li {
+  border-left: 1px solid #fff !important;
+}
+
+li.mat-tree-node,
+li div {
+  margin: 0;
+  position: relative;
+  top: 24px;
+}
+
+li ul {
+  border-top: 1px dotted grey;
+  margin-left: -21px !important;
+  padding-left: 25px;
+}
+
+.mat-nested-tree-node:last-child > li > ul {
+  border-left: 1px solid #fff !important;
+  margin-left: -21px !important;
+}
+
+span {
+  width: 250px;
+  align-items: center;
+  display: flex;
+  height: 35px;
+  vertical-align: middle;
+  background-color: #f2f2f2;
+}
+
+.expend {
+  top: 11px;
+  position: relative;
+  float: left;
+  left: -12px;
+  z-index: 1;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.mat-button {
+  border-left: 5px solid rgb(36, 62, 143);
+  width: 255px;
+  align-items: center;
+  display: flex;
+  height: 35px;
+  vertical-align: middle;
+  background-color: #f2f2f2;
+  padding: 0 0px !important;
+  font-size: 16px !important;
+  font-family: Roboto,Arial,sans-serif !important;
+}
+
+.mat-button:hover{
+  background-color: grey;
+  color: white;
+}
+
+.cdk-focused {
+  background-color: grey;
+  color: white;
+}
